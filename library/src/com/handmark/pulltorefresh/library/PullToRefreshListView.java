@@ -216,7 +216,7 @@ public class PullToRefreshListView extends
 		}
 		return lv;
 	}
-	
+
 	public ListAdapter getAdapter() {
 		return mRefreshableView.getAdapter();
 	}
@@ -225,6 +225,13 @@ public class PullToRefreshListView extends
 		return mRefreshableView.getCount();
 	}
 
+	public int getLastVisiblePosition() {
+		return mRefreshableView.getLastVisiblePosition();
+	}
+	
+	public void setSelection(int i) {
+		mRefreshableView.setSelection(i);
+	}
 
 	@Override
 	protected ListView createRefreshableView(Context context, AttributeSet attrs) {
